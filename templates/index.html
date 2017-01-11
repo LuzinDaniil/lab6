@@ -1,0 +1,13 @@
+<html>
+<menu>
+
+<a href=" {% url 'goods' %}">Список товаров</a>
+</menu>
+<body>
+
+    {% for user in users %}
+    <p>Пользователь: {{ user.username }}
+    {% endfor %}
+
+</body>
+</html>

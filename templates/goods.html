@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <style type="text/css">
+            table {
+                border-collapse: collapse;
+                margin: auto;
+            }
+            table th,
+            table td {
+                padding: 0 3px;
+            }
+            table.brd th,
+            table.brd td {
+                border: 2px solid #001;
+            }
+        </style>
+</head>
+
+
+<h3 align=center>Список товаров</h3>
+
+<table class="brd">
+    <tr>
+        <th>Название</th>
+        <th>Бренд</th>
+        <th>Цена</th>
+    </tr>
+   {% for good in goods %}
+    <tr>
+        <td>{{ good.name }}</td>
+        <td>{{ good.brand }}</td>
+        <td>{{ good.price }}</td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+</html>
